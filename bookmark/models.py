@@ -18,6 +18,10 @@ class Bookmark(models.Model):
     # 3. From의 종류
     # 4. From에서 제약사항
 
+    def __str__(self):
+        return "이름 : " + self.site_name + ", 주소 : " + self.url
+
+
 # 모델을 만들었다 => 데이터베이스에 어떤 데이터들을 어던 형태로 넣을지 결정!
 # makemigartions => 모델의 변경사항을 추적해서 기록
 # 마이그레이션(migate) => 데이터베이스에 모델의 내용을 반용(테이블 생성)
