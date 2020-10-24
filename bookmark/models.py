@@ -19,7 +19,8 @@ class Bookmark(models.Model):
     # 4. From에서 제약사항
 
     def __str__(self):
-        return "이름 : " + self.site_name + ", 주소 : " + self.url
+        # return "이름 : " + self.site_name + ", 주소 : " + self.url
+        return self.site_name + " - " + self.url
 
 
 # 모델을 만들었다 => 데이터베이스에 어떤 데이터들을 어던 형태로 넣을지 결정!
